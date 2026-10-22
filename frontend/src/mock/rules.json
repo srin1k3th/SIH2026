@@ -1,0 +1,156 @@
+[
+  {
+    "id": "LEASE-MIN-TERM",
+    "title": "Minimum 30-Year Registered Lease Term",
+    "description": "Where institutional land is leased from government or local body, lease agreement must be executed for a minimum continuous period of 30 years.",
+    "clause_ref": "TODO-VERIFY",
+    "severity": "high",
+    "category_ids": [
+      "cat-eoa",
+      "cat-new"
+    ],
+    "enabled": true,
+    "threshold": {
+      "label": "Minimum Term",
+      "value": 30,
+      "unit": "years"
+    },
+    "last_run_hits": 0
+  },
+  {
+    "id": "RUL-EXP-01",
+    "title": "Certificate Unexpired at Application Date",
+    "description": "All statutory certificates including Fire Safety NOC, Trust Registration, and Building Occupancy must remain unexpired on application date.",
+    "clause_ref": "TODO-VERIFY",
+    "severity": "medium",
+    "category_ids": [
+      "cat-eoa",
+      "cat-intake",
+      "cat-new"
+    ],
+    "enabled": true,
+    "threshold": null,
+    "last_run_hits": 1
+  },
+  {
+    "id": "XDOC-AREA-01",
+    "title": "Cross-Document Land Area Consistency",
+    "description": "Total land area stated across land deed, building permission, and application form must match with zero discrepancy.",
+    "clause_ref": "TODO-VERIFY",
+    "severity": "high",
+    "category_ids": [
+      "cat-eoa",
+      "cat-new"
+    ],
+    "enabled": true,
+    "threshold": null,
+    "last_run_hits": 1
+  },
+  {
+    "id": "FOR-INCR-01",
+    "title": "Incremental Revision Content Alteration",
+    "description": "Detects subsequent PDF trailer updates altering visible alphanumeric text or numeric quantities.",
+    "clause_ref": "TODO-VERIFY",
+    "severity": "high",
+    "category_ids": [
+      "cat-eoa",
+      "cat-intake",
+      "cat-new"
+    ],
+    "enabled": true,
+    "threshold": null,
+    "last_run_hits": 1
+  },
+  {
+    "id": "FOR-FONT-02",
+    "title": "Embedded Font Typeface Inconsistency",
+    "description": "Detects localized font subset divergence indicative of spliced or digitally overwritten numeric fields.",
+    "clause_ref": "TODO-VERIFY",
+    "severity": "medium",
+    "category_ids": [
+      "cat-eoa",
+      "cat-intake",
+      "cat-new"
+    ],
+    "enabled": true,
+    "threshold": null,
+    "last_run_hits": 1
+  },
+  {
+    "id": "FOR-META-03",
+    "title": "PDF Producer & Modification Anomaly",
+    "description": "Flags documents where PDF producer software changes between revisions or modification date precedes creation.",
+    "clause_ref": "TODO-VERIFY",
+    "severity": "low",
+    "category_ids": [
+      "cat-eoa",
+      "cat-intake",
+      "cat-new"
+    ],
+    "enabled": true,
+    "threshold": null,
+    "last_run_hits": 1
+  },
+  {
+    "id": "FOR-SIG-04",
+    "title": "Content Modification After Digital Sealing",
+    "description": "Flags PDF documents containing incremental updates that modify substantive content following digital certificate attestation.",
+    "clause_ref": "TODO-VERIFY",
+    "severity": "high",
+    "category_ids": [
+      "cat-eoa",
+      "cat-intake",
+      "cat-new"
+    ],
+    "enabled": true,
+    "threshold": null,
+    "last_run_hits": 1
+  },
+  {
+    "id": "ISS-MISMATCH-01",
+    "title": "Issuing Authority Live Registry Discrepancy",
+    "description": "Cross-references accreditation validity dates and certification numbers against national authority databases.",
+    "clause_ref": "TODO-VERIFY",
+    "severity": "high",
+    "category_ids": [
+      "cat-eoa",
+      "cat-intake"
+    ],
+    "enabled": true,
+    "threshold": null,
+    "last_run_hits": 1
+  },
+  {
+    "id": "OCR-CONF-01",
+    "title": "Minimum OCR Extraction Confidence Threshold",
+    "description": "Flags scanned documents where town planning stamp or sanction seal optical recognition falls below confidence threshold.",
+    "clause_ref": "TODO-VERIFY",
+    "severity": "low",
+    "category_ids": [
+      "cat-eoa",
+      "cat-new"
+    ],
+    "enabled": true,
+    "threshold": {
+      "label": "Confidence Threshold",
+      "value": 70,
+      "unit": "%"
+    },
+    "last_run_hits": 1
+  },
+  {
+    "id": "REQ-DOC-01",
+    "title": "Mandatory Statutory Document Checklist",
+    "description": "Mandates that all required statutory documents specified for the category are present in the application package.",
+    "clause_ref": "TODO-VERIFY",
+    "severity": "high",
+    "category_ids": [
+      "cat-eoa",
+      "cat-intake",
+      "cat-new"
+    ],
+    "enabled": true,
+    "threshold": null,
+    "last_run_hits": 1
+  }
+]

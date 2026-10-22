@@ -1,0 +1,85 @@
+{
+  "F-lease-1": {
+    "finding_id": "F-lease-1",
+    "status": "ok",
+    "text": "The document text stream exhibits an incremental PDF update modifying object stream 42. Visual bounding box analysis indicates the string '9.2 acres' replaces '4.2 acres' in revision 2 without authorized re-attestation.",
+    "citations": [
+      {
+        "clause_ref": "APH-2026-IV.3",
+        "snippet": "Clause IV.3: Minimum land requirement must be established through authentic registered title deeds possessing un-tampered demarcated spatial measurements."
+      }
+    ]
+  },
+  "F-lease-2": {
+    "finding_id": "F-lease-2",
+    "status": "ok",
+    "text": "The typeface embedded inside the numeric area span is Courier-Bold (monospaced), whereas the contextual parent paragraph is rendered in proportional Helvetica 10pt.",
+    "citations": [
+      {
+        "clause_ref": "APH-2026-IV.3",
+        "snippet": "Clause IV.3: Authenticity of legal conveyances and sub-registrar certified annexures."
+      }
+    ]
+  },
+  "F-lease-3": {
+    "finding_id": "F-lease-3",
+    "status": "ok",
+    "text": "PDF document metadata indicates a creator tool transformation from the registered municipal 'ReportLab' library to an external desktop editor 'Microsoft Word'.",
+    "citations": []
+  },
+  "F-lease-4": {
+    "finding_id": "F-lease-4",
+    "status": "ok",
+    "text": "Cross-document consistency engine identified conflicting land area values across the application package: 9.2 acres claimed in Lease Deed vs 4.2 acres confirmed in State NOC and Registration Certificate.",
+    "citations": [
+      {
+        "clause_ref": "APH-2026-I.2",
+        "snippet": "Clause I.2: Inter-document field consistency across all submitted statutory clearances."
+      }
+    ]
+  },
+  "F-noc-1": {
+    "finding_id": "F-noc-1",
+    "status": "ok",
+    "text": "Digital signature verification confirmed the cryptographic seal was applied on 18-05-2022. However, incremental byte analysis reveals substantive body text was modified in a later revision post-sealing.",
+    "citations": [
+      {
+        "clause_ref": "APH-2026-II.1",
+        "snippet": "Clause II.1: Digital signatures must remain unmodified; post-signature alterations invalidate statutory clearance."
+      }
+    ]
+  },
+  "F-accr-1": {
+    "finding_id": "F-accr-1",
+    "status": "ok",
+    "text": "Live registry query against the National Accreditation Board records confirmed accreditation expired on 31-03-2025, conflicting with the 31-03-2027 date printed on the submitted certificate.",
+    "citations": [
+      {
+        "clause_ref": "APH-2026-III.4",
+        "snippet": "Clause III.4: Technical courses requiring NBA accreditation must possess active validity spanning the academic approval year."
+      }
+    ]
+  },
+  "F-reg-1": {
+    "finding_id": "F-reg-1",
+    "status": "ok",
+    "text": "The registered Trust renewal certificate expired on 31-12-2023. AICTE Approval Process Handbook mandates active, unexpired trust / society registration.",
+    "citations": [
+      {
+        "clause_ref": "APH-2026-I.1",
+        "snippet": "Clause I.1: Institutional sponsoring trusts must maintain active registration with the relevant Charity Commissioner."
+      }
+    ]
+  },
+  "F-plan-1": {
+    "finding_id": "F-plan-1",
+    "status": "ok",
+    "text": "Optical Character Recognition (OCR) confidence score on the Municipal Town Planning approval seal was 58%, below the 70% threshold required for automated extraction.",
+    "citations": [
+      {
+        "clause_ref": "APH-2026-V.2",
+        "snippet": "Clause V.2: Municipal building sanction drawings must feature clearly legible town planning seals and authorized signatures."
+      }
+    ]
+  }
+}

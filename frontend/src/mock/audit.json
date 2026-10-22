@@ -1,0 +1,156 @@
+[
+  {
+    "seq": 1,
+    "timestamp": "2026-10-21T08:00:00Z",
+    "actor": "system",
+    "role": "officer",
+    "action": "SYSTEM_GENESIS",
+    "target": "ROOT",
+    "detail": "VeriAPH Audit Hash Chain initialized.",
+    "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "hash": "edb957d8e8a12a0c558530d19fd0677e843200ed33f59a9ea27f1cf980d3dbab"
+  },
+  {
+    "seq": 2,
+    "timestamp": "2026-10-21T09:00:00Z",
+    "actor": "Registrar Office",
+    "role": "institution",
+    "action": "APPLICATION_SUBMITTED",
+    "target": "APP-2026-0398",
+    "detail": "Clean Valley Polytechnic submitted EoA application.",
+    "prev_hash": "edb957d8e8a12a0c558530d19fd0677e843200ed33f59a9ea27f1cf980d3dbab",
+    "hash": "bee0fe974876ef5e6a5f6edcabfd2691da94fdd2c37232b7b9477875156cf9d0"
+  },
+  {
+    "seq": 3,
+    "timestamp": "2026-10-21T09:01:15Z",
+    "actor": "system_orchestrator",
+    "role": "officer",
+    "action": "PIPELINE_VALIDATE",
+    "target": "APP-2026-0398",
+    "detail": "Automated verification completed: 0 findings, risk 0.",
+    "prev_hash": "bee0fe974876ef5e6a5f6edcabfd2691da94fdd2c37232b7b9477875156cf9d0",
+    "hash": "16eea878e19dc6c21e273fbb33022dbd3d1d794b0e409564345d496c55bebe90"
+  },
+  {
+    "seq": 4,
+    "timestamp": "2026-10-22T08:15:30Z",
+    "actor": "Registrar Office",
+    "role": "institution",
+    "action": "APPLICATION_SUBMITTED",
+    "target": "APP-2026-0412",
+    "detail": "Sample Institute of Technology submitted EoA application with 6 documents.",
+    "prev_hash": "16eea878e19dc6c21e273fbb33022dbd3d1d794b0e409564345d496c55bebe90",
+    "hash": "b1df200951ea40cd24cb97133e40fa9e8f7c7a429e004a206a3dd84cfd004e3a"
+  },
+  {
+    "seq": 5,
+    "timestamp": "2026-10-22T08:16:10Z",
+    "actor": "system_orchestrator",
+    "role": "officer",
+    "action": "PIPELINE_VALIDATE",
+    "target": "APP-2026-0412",
+    "detail": "Validation completed: 8 findings flagged, risk score 78.",
+    "prev_hash": "b1df200951ea40cd24cb97133e40fa9e8f7c7a429e004a206a3dd84cfd004e3a",
+    "hash": "e7f328d7db02f937f20e0b7ae6692f4355a37bcd69385fd867df03f267fa2614"
+  },
+  {
+    "seq": 6,
+    "timestamp": "2026-10-22T09:10:00Z",
+    "actor": "Demo Officer",
+    "role": "officer",
+    "action": "DOC_REVIEW_OPENED",
+    "target": "d_lease",
+    "detail": "Officer opened Land Lease Deed inspection canvas.",
+    "prev_hash": "e7f328d7db02f937f20e0b7ae6692f4355a37bcd69385fd867df03f267fa2614",
+    "hash": "53d9606eb5455772e5ce91f5ff8cac43c934f12b50abdcfb1033c9d3026eb800"
+  },
+  {
+    "seq": 7,
+    "timestamp": "2026-10-22T09:12:30Z",
+    "actor": "Demo Officer",
+    "role": "officer",
+    "action": "FINDING_INSPECTED",
+    "target": "F-lease-1",
+    "detail": "Inspected Text Alteration on Page 2 (4.2 -> 9.2 acres).",
+    "prev_hash": "53d9606eb5455772e5ce91f5ff8cac43c934f12b50abdcfb1033c9d3026eb800",
+    "hash": "66a089047ef3d9596077a1bf07f092813ebdd8fc90268d799b5dd06afaf07551"
+  },
+  {
+    "seq": 8,
+    "timestamp": "2026-10-22T09:14:45Z",
+    "actor": "Demo Officer",
+    "role": "officer",
+    "action": "FINDING_DECISION",
+    "target": "F-lease-1",
+    "detail": "Decision recorded: clarify. Reason: Clarification requested regarding land area difference.",
+    "prev_hash": "66a089047ef3d9596077a1bf07f092813ebdd8fc90268d799b5dd06afaf07551",
+    "hash": "f90f668c42416d0a70ceb9fea2fd9bceb90912e810d5f2eec9620b63a1c373b8"
+  },
+  {
+    "seq": 9,
+    "timestamp": "2026-10-22T10:05:00Z",
+    "actor": "Demo Officer",
+    "role": "officer",
+    "action": "RULE_THRESHOLD_EDITED",
+    "target": "LEASE-MIN-TERM",
+    "detail": "Threshold updated from 30 to 30 years.",
+    "prev_hash": "f90f668c42416d0a70ceb9fea2fd9bceb90912e810d5f2eec9620b63a1c373b8",
+    "hash": "dcaf19addbe696041f2cc810fbb346841791fdb514c55cc25c9910933b7a4efa"
+  },
+  {
+    "seq": 10,
+    "timestamp": "2026-10-22T10:30:00Z",
+    "actor": "system_orchestrator",
+    "role": "officer",
+    "action": "ISSUER_REGISTRY_POLL",
+    "target": "d_noc",
+    "detail": "Polled Mantralaya e-Governance Registry: returned status 202 Processing.",
+    "prev_hash": "dcaf19addbe696041f2cc810fbb346841791fdb514c55cc25c9910933b7a4efa",
+    "hash": "d5433d8db07a633a921533a53385c7d74dac470d0e49d096ad5b52f73a58496e"
+  },
+  {
+    "seq": 11,
+    "timestamp": "2026-10-22T11:00:00Z",
+    "actor": "Demo Officer",
+    "role": "officer",
+    "action": "REPORT_EXPORT_TRIGGERED",
+    "target": "APP-2026-0412",
+    "detail": "Generated scrutiny summary PDF report.",
+    "prev_hash": "d5433d8db07a633a921533a53385c7d74dac470d0e49d096ad5b52f73a58496e",
+    "hash": "e4c74b30c0b2e63640909d7a6e4bdc601d943daf04117c081d9ef4de3fbd0710"
+  },
+  {
+    "seq": 12,
+    "timestamp": "2026-10-22T11:45:00Z",
+    "actor": "Registrar Office",
+    "role": "institution",
+    "action": "APPLICATION_SUBMITTED",
+    "target": "APP-2026-0219",
+    "detail": "Meridian Institute submitted intake expansion request.",
+    "prev_hash": "e4c74b30c0b2e63640909d7a6e4bdc601d943daf04117c081d9ef4de3fbd0710",
+    "hash": "d1b8c224b8168c7eba874a3b2f6026b76d4ba4317503221182f50d78bb4f5fc9"
+  },
+  {
+    "seq": 13,
+    "timestamp": "2026-10-22T11:46:12Z",
+    "actor": "system_orchestrator",
+    "role": "officer",
+    "action": "PIPELINE_VALIDATE",
+    "target": "APP-2026-0219",
+    "detail": "Validation completed: 5 findings, risk score 41.",
+    "prev_hash": "d1b8c224b8168c7eba874a3b2f6026b76d4ba4317503221182f50d78bb4f5fc9",
+    "hash": "4df93a088da9a3773a898eadc4eac09627c1020168e7c93742804e56996b1a1a"
+  },
+  {
+    "seq": 14,
+    "timestamp": "2026-10-23T02:00:00Z",
+    "actor": "Demo Officer",
+    "role": "officer",
+    "action": "AUDIT_CHAIN_VERIFY",
+    "target": "CHAIN",
+    "detail": "Officer executed cryptographic audit chain integrity check.",
+    "prev_hash": "4df93a088da9a3773a898eadc4eac09627c1020168e7c93742804e56996b1a1a",
+    "hash": "801c70b38a4a53d711e2adbff0216bd39d5f7b81316fdffb11dcc624a6bae3ba"
+  }
+]

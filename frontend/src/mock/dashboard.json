@@ -1,0 +1,157 @@
+{
+  "kpis": {
+    "applications": 5,
+    "flagged": 4,
+    "pending_verification": 2,
+    "expiring": 1
+  },
+  "queue": [
+    {
+      "id": "APP-2026-0412",
+      "institution": "Sample Institute of Technology",
+      "category_id": "cat-eoa",
+      "category_label": "Extension of Approval (EoA)",
+      "submitted_at": "2026-10-22T08:15:30Z",
+      "risk_score": 78,
+      "doc_count": 6,
+      "status_counts": {
+        "manual_review_required": 1,
+        "verification_pending": 1,
+        "verified": 1,
+        "mismatch_detected": 1,
+        "expired": 1,
+        "source_unavailable": 1
+      },
+      "flag_counts": {
+        "high": 4,
+        "medium": 2,
+        "low": 2
+      },
+      "has_missing": true
+    },
+    {
+      "id": "APP-2026-0398",
+      "institution": "Clean Valley Polytechnic",
+      "category_id": "cat-eoa",
+      "category_label": "Extension of Approval (EoA)",
+      "submitted_at": "2026-10-21T09:00:00Z",
+      "risk_score": 0,
+      "doc_count": 4,
+      "status_counts": {
+        "verified": 4
+      },
+      "flag_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "has_missing": false
+    },
+    {
+      "id": "APP-2026-0219",
+      "institution": "Meridian Institute of Management",
+      "category_id": "cat-intake",
+      "category_label": "Increase in Intake / Additional Course",
+      "submitted_at": "2026-10-20T11:45:00Z",
+      "risk_score": 41,
+      "doc_count": 5,
+      "status_counts": {
+        "verified": 3,
+        "expired": 1,
+        "manual_review_required": 1
+      },
+      "flag_counts": {
+        "high": 2,
+        "medium": 1,
+        "low": 2
+      },
+      "has_missing": false
+    },
+    {
+      "id": "APP-2026-0155",
+      "institution": "Kaveri College of Engineering",
+      "category_id": "cat-eoa",
+      "category_label": "Extension of Approval (EoA)",
+      "submitted_at": "2026-10-19T14:20:00Z",
+      "risk_score": 22,
+      "doc_count": 6,
+      "status_counts": {
+        "verified": 4,
+        "verification_pending": 1,
+        "mismatch_detected": 1
+      },
+      "flag_counts": {
+        "high": 1,
+        "medium": 1,
+        "low": 0
+      },
+      "has_missing": false
+    },
+    {
+      "id": "APP-2026-0112",
+      "institution": "Lakshmi Polytechnic",
+      "category_id": "cat-new",
+      "category_label": "Introduction of New Programme",
+      "submitted_at": "2026-10-18T16:10:00Z",
+      "risk_score": 9,
+      "doc_count": 4,
+      "status_counts": {
+        "verified": 3,
+        "manual_review_required": 1
+      },
+      "flag_counts": {
+        "high": 0,
+        "medium": 1,
+        "low": 1
+      },
+      "has_missing": false
+    }
+  ],
+  "alerts": [
+    {
+      "id": "ALT-001",
+      "application_id": "APP-2026-0412",
+      "doc_id": "d_reg",
+      "kind": "expired",
+      "message": "Trust Registration certificate expired on 31-12-2023. Valid renewal required.",
+      "due_date": "2026-11-05",
+      "severity": "medium"
+    },
+    {
+      "id": "ALT-002",
+      "application_id": "APP-2026-0412",
+      "doc_id": "d_accr",
+      "kind": "anomaly",
+      "message": "NBA Accreditation certificate validity mismatch against central issuer registry.",
+      "due_date": "2026-10-30",
+      "severity": "high"
+    },
+    {
+      "id": "ALT-003",
+      "application_id": "APP-2026-0412",
+      "doc_id": "d_noc",
+      "kind": "pending_verification",
+      "message": "State Government NOC digital certificate verification pending (HTTP 202).",
+      "due_date": "2026-10-28",
+      "severity": "high"
+    },
+    {
+      "id": "ALT-004",
+      "application_id": "APP-2026-0412",
+      "doc_id": null,
+      "kind": "missing",
+      "message": "Mandatory statutory document 'Affidavit / Undertaking' is missing from submission.",
+      "due_date": "2026-10-27",
+      "severity": "high"
+    },
+    {
+      "id": "ALT-005",
+      "application_id": "APP-2026-0219",
+      "doc_id": "d_meridian_cert",
+      "kind": "expiring",
+      "message": "Building Safety Clearance certificate expiring in 25 days (17-11-2026).",
+      "due_date": "2026-11-17",
+      "severity": "medium"
+    }
+  ]
+}

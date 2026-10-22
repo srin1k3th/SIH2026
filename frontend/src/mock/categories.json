@@ -1,0 +1,17 @@
+[
+  {
+    "id": "cat-eoa",
+    "label": "Extension of Approval (EoA)",
+    "description": "Annual renewal of approval for existing AICTE-approved technical institutions."
+  },
+  {
+    "id": "cat-intake",
+    "label": "Increase in Intake / Additional Course",
+    "description": "Application for increasing student intake quota or adding new engineering branches."
+  },
+  {
+    "id": "cat-new",
+    "label": "Introduction of New Programme",
+    "description": "Establishment of new technical campus or integrated polytechnic / engineering college."
+  }
+]

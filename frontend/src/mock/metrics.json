@@ -1,0 +1,50 @@
+{
+  "detection_by_type": [
+    {
+      "type": "TEXT_EDITED_AFTER_CREATION",
+      "n": 15,
+      "detected": 14
+    },
+    {
+      "type": "MODIFIED_AFTER_SIGNING",
+      "n": 10,
+      "detected": 10
+    },
+    {
+      "type": "FONT_INCONSISTENCY",
+      "n": 12,
+      "detected": 11
+    },
+    {
+      "type": "PRODUCER_MISMATCH",
+      "n": 8,
+      "detected": 8
+    },
+    {
+      "type": "CROSSDOC_FIELD_MISMATCH",
+      "n": 16,
+      "detected": 16
+    },
+    {
+      "type": "DOC_EXPIRED",
+      "n": 14,
+      "detected": 14
+    },
+    {
+      "type": "ISSUER_MISMATCH",
+      "n": 9,
+      "detected": 9
+    },
+    {
+      "type": "LOW_OCR_CONFIDENCE",
+      "n": 6,
+      "detected": 5
+    }
+  ],
+  "clean_docs": 32,
+  "false_positives": 1,
+  "avg_seconds_per_doc": 1.48,
+  "n_docs": 90,
+  "generated_at": "2026-10-22T20:00:00Z",
+  "is_sample": true
+}

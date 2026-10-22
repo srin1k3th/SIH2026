@@ -1,0 +1,1367 @@
+{
+  "APP-2026-0412": {
+    "id": "APP-2026-0412",
+    "institution": "Sample Institute of Technology",
+    "category_id": "cat-eoa",
+    "category_label": "Extension of Approval (EoA)",
+    "submitted_at": "2026-10-22T08:15:30Z",
+    "risk_score": 78,
+    "doc_count": 6,
+    "status_counts": {
+      "manual_review_required": 1,
+      "verification_pending": 1,
+      "verified": 1,
+      "mismatch_detected": 1,
+      "expired": 1,
+      "source_unavailable": 1
+    },
+    "flag_counts": {
+      "high": 4,
+      "medium": 2,
+      "low": 2
+    },
+    "has_missing": true,
+    "checklist": [
+      {
+        "doc_type": "land_lease_deed",
+        "label": "Land lease deed",
+        "required": true,
+        "description": "Registered 30-year minimum land lease deed executed with state government or local authority.",
+        "document_id": "d_lease"
+      },
+      {
+        "doc_type": "state_noc",
+        "label": "NOC from state authority",
+        "required": true,
+        "description": "Cryptographically signed No Objection Certificate issued by State Higher Education Department.",
+        "document_id": "d_noc"
+      },
+      {
+        "doc_type": "fire_safety",
+        "label": "Fire safety certificate",
+        "required": true,
+        "description": "Current valid fire prevention and life safety clearance issued by Chief Fire Officer.",
+        "document_id": "d_fire"
+      },
+      {
+        "doc_type": "accreditation",
+        "label": "Accreditation certificate",
+        "required": true,
+        "description": "National Board of Accreditation (NBA) accreditation validity certificate for technical courses.",
+        "document_id": "d_accr"
+      },
+      {
+        "doc_type": "registration_cert",
+        "label": "Registration certificate",
+        "required": true,
+        "description": "Trust / Society registration certificate issued by the Charity Commissioner.",
+        "document_id": "d_reg"
+      },
+      {
+        "doc_type": "building_plan",
+        "label": "Building plan approval (scanned)",
+        "required": true,
+        "description": "Sanctioned master floor layout and architectural occupancy plan approved by Municipal Corporation.",
+        "document_id": "d_plan"
+      },
+      {
+        "doc_type": "affidavit",
+        "label": "Affidavit / Undertaking",
+        "required": true,
+        "description": "Notarized compliance affidavit on non-judicial stamp paper confirming zero fee cap violations.",
+        "document_id": null
+      }
+    ],
+    "documents": [
+      {
+        "id": "d_lease",
+        "application_id": "APP-2026-0412",
+        "doc_type": "land_lease_deed",
+        "label": "Land lease deed",
+        "filename": "Land_Lease_Deed_Registered.pdf",
+        "status": "manual_review_required",
+        "uploaded_at": "2026-10-22T08:15:30Z",
+        "is_scanned": false,
+        "page_sizes": [
+          {
+            "width": 595.28,
+            "height": 841.89
+          },
+          {
+            "width": 595.28,
+            "height": 841.89
+          }
+        ],
+        "revisions": [
+          {
+            "rev": 1,
+            "label": "Created",
+            "saved_at": "2015-06-01T10:00:00Z",
+            "producer": "ReportLab PDF Library",
+            "is_current": false
+          },
+          {
+            "rev": 2,
+            "label": "Edited",
+            "saved_at": "2026-10-20T14:30:00Z",
+            "producer": "Microsoft Word for Office 365",
+            "is_current": true
+          }
+        ],
+        "signature": null,
+        "verification": {
+          "source": "State Land Records Portal (Bhulekh / 7-12)",
+          "reference": "MAHA/LND/PUN/2015/8821",
+          "requested_at": "2026-10-22T08:16:02Z",
+          "result": "manual_review_required",
+          "message": "Land records extract indicates 4.2 acres allotted; submitted deed revision specifies 9.2 acres.",
+          "submitted_fields": {
+            "trust_name": "Shri Ram Educational Trust",
+            "survey_no": "SY 214/3B",
+            "land_area": "9.2 acres",
+            "lease_start": "2015-06-01",
+            "lease_end": "2045-05-31"
+          },
+          "source_fields": {
+            "trust_name": "Shri Ram Educational Trust",
+            "survey_no": "SY 214/3B",
+            "land_area": "4.2 acres",
+            "lease_start": "2015-06-01",
+            "lease_end": "2045-05-31"
+          }
+        },
+        "fields": [
+          {
+            "name": "trust_name",
+            "value": "Shri Ram Educational Trust",
+            "confidence": "high"
+          },
+          {
+            "name": "survey_no",
+            "value": "SY 214/3B",
+            "confidence": "high"
+          },
+          {
+            "name": "land_area",
+            "value": "9.2 acres",
+            "confidence": "high"
+          },
+          {
+            "name": "lease_start",
+            "value": "2015-06-01",
+            "confidence": "high"
+          },
+          {
+            "name": "lease_end",
+            "value": "2045-05-31",
+            "confidence": "high"
+          },
+          {
+            "name": "signatories",
+            "value": "District Collector, Pune / Fr. Paul Fernandes",
+            "confidence": "high"
+          }
+        ],
+        "findings": [
+          {
+            "id": "F-lease-1",
+            "doc_id": "d_lease",
+            "source": "forensics",
+            "type": "TEXT_EDITED_AFTER_CREATION",
+            "severity": "high",
+            "page": 2,
+            "bbox": [
+              200.03,
+              146.06,
+              258.03,
+              162.55
+            ],
+            "rule_id": "FOR-INCR-01",
+            "reason": "Text '9.2 acres' was modified in revision 2 over previous value '4.2 acres'.",
+            "evidence": {
+              "before": "4.2 acres",
+              "after": "9.2 acres",
+              "revision": 2,
+              "note": "Incremental PDF revision modified textual content in section 3."
+            },
+            "confidence": "high",
+            "decision": null
+          },
+          {
+            "id": "F-lease-2",
+            "doc_id": "d_lease",
+            "source": "forensics",
+            "type": "FONT_INCONSISTENCY",
+            "severity": "medium",
+            "page": 2,
+            "bbox": [
+              198.03,
+              144.06,
+              260.03,
+              164.55
+            ],
+            "rule_id": "FOR-FONT-02",
+            "reason": "Font Courier-Bold in modified text differs from the document Helvetica body typeface.",
+            "evidence": {
+              "before": "Helvetica 10pt",
+              "after": "Courier-Bold 10pt",
+              "revision": 2,
+              "note": "Discrepant embedded font subset detected in numeric land area span."
+            },
+            "confidence": "high",
+            "decision": null
+          },
+          {
+            "id": "F-lease-3",
+            "doc_id": "d_lease",
+            "source": "forensics",
+            "type": "PRODUCER_MISMATCH",
+            "severity": "low",
+            "page": 1,
+            "bbox": null,
+            "rule_id": "FOR-META-03",
+            "reason": "PDF producer changed between revisions: original was 'ReportLab PDF Library', revision 2 is 'Microsoft Word'.",
+            "evidence": {
+              "before": "ReportLab PDF Library",
+              "after": "Microsoft Word for Office 365",
+              "revision": 2,
+              "note": "Re-saved using external word processor."
+            },
+            "confidence": "high",
+            "decision": null
+          },
+          {
+            "id": "F-lease-4",
+            "doc_id": "d_lease",
+            "source": "crosscheck",
+            "type": "CROSSDOC_FIELD_MISMATCH",
+            "severity": "high",
+            "page": 2,
+            "bbox": [
+              201.03,
+              147.06,
+              257.03,
+              161.55
+            ],
+            "rule_id": "XDOC-AREA-01",
+            "reason": "Land area 9.2 acres here vs 4.2 acres declared in State NOC and Registration certificate.",
+            "evidence": {
+              "before": "4.2 acres (in NOC & Reg Cert)",
+              "after": "9.2 acres (in Lease & Application)",
+              "note": "Land area 9.2 acres here vs 4.2 acres in NOC and Registration certificate"
+            },
+            "confidence": "high",
+            "decision": null
+          }
+        ]
+      },
+      {
+        "id": "d_noc",
+        "application_id": "APP-2026-0412",
+        "doc_type": "state_noc",
+        "label": "NOC from state authority",
+        "filename": "State_Authority_NOC_Signed.pdf",
+        "status": "verification_pending",
+        "uploaded_at": "2026-10-22T08:15:30Z",
+        "is_scanned": false,
+        "page_sizes": [
+          {
+            "width": 595.28,
+            "height": 841.89
+          }
+        ],
+        "revisions": [
+          {
+            "rev": 1,
+            "label": "Signed",
+            "saved_at": "2022-05-18T11:42:10Z",
+            "producer": "DigitalSigner Demo CA",
+            "is_current": true
+          }
+        ],
+        "signature": {
+          "present": true,
+          "intact": true,
+          "valid": true,
+          "trusted": true,
+          "modification_level": "other",
+          "signer": "Under Secretary, Revenue Dept.",
+          "signed_at": "2022-05-18T11:42:10+05:30"
+        },
+        "verification": {
+          "source": "Maharashtra Mantralaya e-Governance Registry",
+          "reference": "NOC/2022/PK-114",
+          "requested_at": "2026-10-22T08:16:03Z",
+          "result": "verification_pending",
+          "message": "Issuer returned 202: processing verification queue request",
+          "submitted_fields": {
+            "trust_name": "Sri Ram Educational Trust",
+            "survey_no": "SY-214/3B",
+            "land_area": "4.2 acres"
+          },
+          "source_fields": null
+        },
+        "fields": [
+          {
+            "name": "trust_name",
+            "value": "Sri Ram Educational Trust",
+            "confidence": "high"
+          },
+          {
+            "name": "survey_no",
+            "value": "SY-214/3B",
+            "confidence": "high"
+          },
+          {
+            "name": "land_area",
+            "value": "4.2 acres",
+            "confidence": "high"
+          },
+          {
+            "name": "signatories",
+            "value": "Under Secretary, Higher & Technical Education Dept",
+            "confidence": "high"
+          }
+        ],
+        "findings": [
+          {
+            "id": "F-noc-1",
+            "doc_id": "d_noc",
+            "source": "forensics",
+            "type": "MODIFIED_AFTER_SIGNING",
+            "severity": "high",
+            "page": 1,
+            "bbox": [
+              70.0,
+              494.19,
+              377.0,
+              511.96
+            ],
+            "rule_id": "FOR-SIG-04",
+            "reason": "Document content was modified in an unsigned revision after the digital signature was applied.",
+            "evidence": {
+              "note": "Content changed in a later revision after the signature was applied"
+            },
+            "confidence": "high",
+            "decision": null
+          }
+        ]
+      },
+      {
+        "id": "d_fire",
+        "application_id": "APP-2026-0412",
+        "doc_type": "fire_safety",
+        "label": "Fire safety certificate",
+        "filename": "Fire_Safety_Certificate_NOC.pdf",
+        "status": "verified",
+        "uploaded_at": "2026-10-22T08:15:30Z",
+        "is_scanned": false,
+        "page_sizes": [
+          {
+            "width": 595.28,
+            "height": 841.89
+          }
+        ],
+        "revisions": [
+          {
+            "rev": 1,
+            "label": "Original",
+            "saved_at": "2025-04-01T10:00:00Z",
+            "producer": "State Fire Services Portal",
+            "is_current": true
+          }
+        ],
+        "signature": null,
+        "verification": {
+          "source": "Mock Issuer: State Fire Services",
+          "reference": "FSC/2025/88213",
+          "requested_at": "2026-10-22T08:16:04Z",
+          "result": "verified",
+          "message": "Certificate QR and issuer database records match submitted document perfectly.",
+          "submitted_fields": {
+            "trust_name": "Shri Ram Educational Trust",
+            "cert_valid_from": "2025-04-01",
+            "cert_valid_to": "2028-03-31",
+            "signatories": "Chief Fire Officer, Municipal Corporation"
+          },
+          "source_fields": {
+            "trust_name": "Shri Ram Educational Trust",
+            "cert_valid_from": "2025-04-01",
+            "cert_valid_to": "2028-03-31",
+            "signatories": "Chief Fire Officer, Municipal Corporation"
+          }
+        },
+        "fields": [
+          {
+            "name": "trust_name",
+            "value": "Shri Ram Educational Trust",
+            "confidence": "high"
+          },
+          {
+            "name": "cert_valid_from",
+            "value": "2025-04-01",
+            "confidence": "high"
+          },
+          {
+            "name": "cert_valid_to",
+            "value": "2028-03-31",
+            "confidence": "high"
+          },
+          {
+            "name": "signatories",
+            "value": "Chief Fire Officer, Municipal Corporation",
+            "confidence": "high"
+          }
+        ],
+        "findings": []
+      },
+      {
+        "id": "d_accr",
+        "application_id": "APP-2026-0412",
+        "doc_type": "accreditation",
+        "label": "Accreditation certificate",
+        "filename": "Accreditation_Certificate_NBA.pdf",
+        "status": "mismatch_detected",
+        "uploaded_at": "2026-10-22T08:15:30Z",
+        "is_scanned": false,
+        "page_sizes": [
+          {
+            "width": 595.28,
+            "height": 841.89
+          }
+        ],
+        "revisions": [
+          {
+            "rev": 1,
+            "label": "Original",
+            "saved_at": "2022-04-01T09:00:00Z",
+            "producer": "National Accreditation Portal",
+            "is_current": true
+          }
+        ],
+        "signature": null,
+        "verification": {
+          "source": "National Accreditation Board (NBA API)",
+          "reference": "NBA/2022/94101",
+          "requested_at": "2026-10-22T08:16:04Z",
+          "result": "mismatch_detected",
+          "message": "Validity date mismatch: submitted document indicates 31-03-2027; official issuer registry records 31-03-2025.",
+          "submitted_fields": {
+            "trust_name": "Shri Ram Educational Trust",
+            "cert_valid_from": "2022-04-01",
+            "cert_valid_to": "31-03-2027"
+          },
+          "source_fields": {
+            "trust_name": "Shri Ram Educational Trust",
+            "cert_valid_from": "2022-04-01",
+            "cert_valid_to": "31-03-2025"
+          }
+        },
+        "fields": [
+          {
+            "name": "trust_name",
+            "value": "Shri Ram Educational Trust",
+            "confidence": "high"
+          },
+          {
+            "name": "cert_valid_from",
+            "value": "2022-04-01",
+            "confidence": "high"
+          },
+          {
+            "name": "cert_valid_to",
+            "value": "31-03-2027",
+            "confidence": "high"
+          },
+          {
+            "name": "signatories",
+            "value": "Member Secretary, Accreditation Board",
+            "confidence": "high"
+          }
+        ],
+        "findings": [
+          {
+            "id": "F-accr-1",
+            "doc_id": "d_accr",
+            "source": "issuer",
+            "type": "ISSUER_MISMATCH",
+            "severity": "high",
+            "page": 1,
+            "bbox": [
+              210.02,
+              335.19,
+              265.16,
+              352.96
+            ],
+            "rule_id": "ISS-MISMATCH-01",
+            "reason": "Accreditation validity date discrepancy: submitted document claims 31-03-2027, but official NBA issuer registry records expired validity of 31-03-2025.",
+            "evidence": {
+              "before": "Submitted: 31-03-2027",
+              "after": "Issuer record: 31-03-2025",
+              "note": "Authority registry crosscheck confirms 2-year discrepancy."
+            },
+            "confidence": "high",
+            "decision": null
+          }
+        ]
+      },
+      {
+        "id": "d_reg",
+        "application_id": "APP-2026-0412",
+        "doc_type": "registration_cert",
+        "label": "Registration certificate",
+        "filename": "Trust_Registration_Certificate.pdf",
+        "status": "expired",
+        "uploaded_at": "2026-10-22T08:15:30Z",
+        "is_scanned": false,
+        "page_sizes": [
+          {
+            "width": 595.28,
+            "height": 841.89
+          }
+        ],
+        "revisions": [
+          {
+            "rev": 1,
+            "label": "Original",
+            "saved_at": "2004-01-12T10:00:00Z",
+            "producer": "Charity Commissioner Office",
+            "is_current": true
+          }
+        ],
+        "signature": null,
+        "verification": {
+          "source": "Public Trusts Registration Office, Pune",
+          "reference": "F-18492/Pune",
+          "requested_at": "2026-10-22T08:16:05Z",
+          "result": "expired",
+          "message": "Society periodic renewal term expired on 31-12-2023. No active renewal certificate on file.",
+          "submitted_fields": {
+            "trust_name": "Shri Ram Educational Trust",
+            "survey_no": "SY 214/3B",
+            "land_area": "4.2 acres",
+            "cert_valid_to": "31-12-2023"
+          },
+          "source_fields": {
+            "trust_name": "Shri Ram Educational Trust",
+            "survey_no": "SY 214/3B",
+            "land_area": "4.2 acres",
+            "cert_valid_to": "31-12-2023"
+          }
+        },
+        "fields": [
+          {
+            "name": "trust_name",
+            "value": "Shri Ram Educational Trust",
+            "confidence": "high"
+          },
+          {
+            "name": "survey_no",
+            "value": "SY 214/3B",
+            "confidence": "high"
+          },
+          {
+            "name": "land_area",
+            "value": "4.2 acres",
+            "confidence": "high"
+          },
+          {
+            "name": "cert_valid_to",
+            "value": "31-12-2023",
+            "confidence": "high"
+          },
+          {
+            "name": "signatories",
+            "value": "Assistant Charity Commissioner, Pune",
+            "confidence": "high"
+          }
+        ],
+        "findings": [
+          {
+            "id": "F-reg-1",
+            "doc_id": "d_reg",
+            "source": "rules",
+            "type": "DOC_EXPIRED",
+            "severity": "medium",
+            "page": 1,
+            "bbox": [
+              432.89,
+              367.19,
+              541.93,
+              384.96
+            ],
+            "rule_id": "RUL-EXP-01",
+            "reason": "Trust registration renewal expired on 31-12-2023. Current regulatory clearance is required for approval.",
+            "evidence": {
+              "before": "Valid until: 31-12-2023",
+              "after": "Current date: 2026-10-23",
+              "note": "Document expired before application submission date."
+            },
+            "confidence": "high",
+            "decision": null
+          }
+        ]
+      },
+      {
+        "id": "d_plan",
+        "application_id": "APP-2026-0412",
+        "doc_type": "building_plan",
+        "label": "Building plan approval (scanned)",
+        "filename": "Sanctioned_Building_Plan_Approval.pdf",
+        "status": "source_unavailable",
+        "uploaded_at": "2026-10-22T08:15:30Z",
+        "is_scanned": true,
+        "page_sizes": [
+          {
+            "width": 595.28,
+            "height": 841.89
+          }
+        ],
+        "revisions": [
+          {
+            "rev": 1,
+            "label": "Scanned",
+            "saved_at": "2021-08-14T15:20:00Z",
+            "producer": "ImageScan Flatbed v4",
+            "is_current": true
+          }
+        ],
+        "signature": null,
+        "verification": {
+          "source": "Municipal Town Planning Portal",
+          "reference": "TP/SANCTION/2021/4192",
+          "requested_at": "2026-10-22T08:16:05Z",
+          "result": "source_unavailable",
+          "message": "Municipal verification portal timed out (HTTP 503 Service Unavailable). Live verification failed.",
+          "submitted_fields": {
+            "trust_name": "Shri Ram Educational Trust",
+            "survey_no": "SY 214/3B"
+          },
+          "source_fields": null
+        },
+        "fields": [
+          {
+            "name": "trust_name",
+            "value": "Shri Ram Educational Trust",
+            "confidence": "medium"
+          },
+          {
+            "name": "survey_no",
+            "value": "SY 214/3B",
+            "confidence": "medium"
+          }
+        ],
+        "findings": [
+          {
+            "id": "F-plan-1",
+            "doc_id": "d_plan",
+            "source": "rules",
+            "type": "LOW_OCR_CONFIDENCE",
+            "severity": "low",
+            "page": 1,
+            "bbox": [
+              340.0,
+              550.0,
+              510.0,
+              670.0
+            ],
+            "rule_id": "OCR-CONF-01",
+            "reason": "Town planning sanction stamp region has low OCR extraction confidence (58% vs required 70% threshold).",
+            "evidence": {
+              "note": "OCR confidence on town planning seal is 58% (< threshold 70%)"
+            },
+            "confidence": "low",
+            "decision": null
+          }
+        ]
+      }
+    ],
+    "crosscheck": {
+      "fields": [
+        {
+          "id": "trust_name",
+          "label": "Trust / Society Name"
+        },
+        {
+          "id": "survey_no",
+          "label": "Land Survey Number"
+        },
+        {
+          "id": "land_area",
+          "label": "Total Land Area"
+        },
+        {
+          "id": "lease_start",
+          "label": "Lease Start Date"
+        },
+        {
+          "id": "lease_end",
+          "label": "Lease End Date"
+        },
+        {
+          "id": "signatories",
+          "label": "Signatory Authorities"
+        }
+      ],
+      "sources": [
+        {
+          "id": "application",
+          "label": "Application Form"
+        },
+        {
+          "id": "d_lease",
+          "label": "Land Lease Deed"
+        },
+        {
+          "id": "d_noc",
+          "label": "State NOC"
+        },
+        {
+          "id": "d_reg",
+          "label": "Registration Cert"
+        }
+      ],
+      "cells": {
+        "land_area": {
+          "application": {
+            "value": "9.2 acres",
+            "normalized": "37,231 sq m",
+            "match": false,
+            "note": "Differs from majority (4.2 acres)"
+          },
+          "d_lease": {
+            "value": "9.2 acres",
+            "normalized": "37,231 sq m",
+            "match": false,
+            "note": "Land area 9.2 acres here vs 4.2 acres in NOC and Registration certificate",
+            "finding_id": "F-lease-4"
+          },
+          "d_noc": {
+            "value": "4.2 acres",
+            "normalized": "16,997 sq m",
+            "match": true
+          },
+          "d_reg": {
+            "value": "4.2 acres",
+            "normalized": "16,997 sq m",
+            "match": true
+          }
+        },
+        "trust_name": {
+          "application": {
+            "value": "Shri Ram Educational Trust",
+            "normalized": "shri ram educational trust",
+            "match": true
+          },
+          "d_lease": {
+            "value": "Shri Ram Educational Trust",
+            "normalized": "shri ram educational trust",
+            "match": true
+          },
+          "d_noc": {
+            "value": "Sri Ram Educational Trust",
+            "normalized": "sri ram educational trust",
+            "match": true,
+            "note": "Fuzzy match 0.96: spelling variant"
+          },
+          "d_reg": {
+            "value": "Shri Ram Educational Trust",
+            "normalized": "shri ram educational trust",
+            "match": true
+          }
+        },
+        "survey_no": {
+          "application": {
+            "value": "SY 214/3B",
+            "normalized": "SY214/3B",
+            "match": true
+          },
+          "d_lease": {
+            "value": "SY 214/3B",
+            "normalized": "SY214/3B",
+            "match": true
+          },
+          "d_noc": {
+            "value": "SY-214/3B",
+            "normalized": "SY214/3B",
+            "match": true,
+            "note": "Punctuation normalized"
+          },
+          "d_reg": {
+            "value": "SY 214/3B",
+            "normalized": "SY214/3B",
+            "match": true
+          }
+        },
+        "lease_start": {
+          "application": {
+            "value": "01-06-2015",
+            "normalized": "2015-06-01",
+            "match": true
+          },
+          "d_lease": {
+            "value": "01-06-2015",
+            "normalized": "2015-06-01",
+            "match": true
+          },
+          "d_noc": {
+            "value": null,
+            "normalized": null,
+            "match": true
+          },
+          "d_reg": {
+            "value": null,
+            "normalized": null,
+            "match": true
+          }
+        },
+        "lease_end": {
+          "application": {
+            "value": "31-05-2045",
+            "normalized": "2045-05-31",
+            "match": true
+          },
+          "d_lease": {
+            "value": "31-05-2045",
+            "normalized": "2045-05-31",
+            "match": true
+          },
+          "d_noc": {
+            "value": null,
+            "normalized": null,
+            "match": true
+          },
+          "d_reg": {
+            "value": null,
+            "normalized": null,
+            "match": true
+          }
+        },
+        "signatories": {
+          "application": {
+            "value": "Fr. Paul Fernandes",
+            "normalized": "paul fernandes",
+            "match": true
+          },
+          "d_lease": {
+            "value": "Collector Pune / Fr. Paul Fernandes",
+            "normalized": "collector pune paul fernandes",
+            "match": true
+          },
+          "d_noc": {
+            "value": "Under Secretary, Revenue Dept.",
+            "normalized": "under secretary revenue dept",
+            "match": true
+          },
+          "d_reg": {
+            "value": "Asst. Charity Commissioner",
+            "normalized": "asst charity commissioner",
+            "match": true
+          }
+        }
+      }
+    },
+    "verification_log": [
+      {
+        "id": "VER-001",
+        "doc_id": "d_lease",
+        "doc_label": "Land lease deed",
+        "source": "State Land Records Portal (Bhulekh / 7-12)",
+        "reference": "MAHA/LND/PUN/2015/8821",
+        "requested_at": "2026-10-22T08:16:02Z",
+        "status": "manual_review_required",
+        "message": "Land records extract indicates 4.2 acres allotted; submitted deed revision specifies 9.2 acres."
+      },
+      {
+        "id": "VER-002",
+        "doc_id": "d_noc",
+        "doc_label": "NOC from state authority",
+        "source": "Maharashtra Mantralaya e-Governance Registry",
+        "reference": "NOC/2022/PK-114",
+        "requested_at": "2026-10-22T08:16:03Z",
+        "status": "verification_pending",
+        "message": "Issuer returned 202: processing verification queue request"
+      },
+      {
+        "id": "VER-003",
+        "doc_id": "d_fire",
+        "doc_label": "Fire safety certificate",
+        "source": "Mock Issuer: State Fire Services",
+        "reference": "FSC/2025/88213",
+        "requested_at": "2026-10-22T08:16:04Z",
+        "status": "verified",
+        "message": "Certificate QR and issuer database records match submitted document perfectly."
+      },
+      {
+        "id": "VER-004",
+        "doc_id": "d_accr",
+        "doc_label": "Accreditation certificate",
+        "source": "National Accreditation Board (NBA API)",
+        "reference": "NBA/2022/94101",
+        "requested_at": "2026-10-22T08:16:04Z",
+        "status": "mismatch_detected",
+        "message": "Validity date mismatch: submitted document indicates 31-03-2027; official issuer registry records 31-03-2025."
+      },
+      {
+        "id": "VER-005",
+        "doc_id": "d_reg",
+        "doc_label": "Registration certificate",
+        "source": "Public Trusts Registration Office, Pune",
+        "reference": "F-18492/Pune",
+        "requested_at": "2026-10-22T08:16:05Z",
+        "status": "expired",
+        "message": "Society periodic renewal term expired on 31-12-2023. No active renewal certificate on file."
+      },
+      {
+        "id": "VER-006",
+        "doc_id": "d_plan",
+        "doc_label": "Building plan approval (scanned)",
+        "source": "Municipal Town Planning Portal",
+        "reference": "TP/SANCTION/2021/4192",
+        "requested_at": "2026-10-22T08:16:05Z",
+        "status": "source_unavailable",
+        "message": "Municipal verification portal timed out (HTTP 503 Service Unavailable). Live verification failed."
+      }
+    ],
+    "alerts": [
+      {
+        "id": "ALT-001",
+        "application_id": "APP-2026-0412",
+        "doc_id": "d_reg",
+        "kind": "expired",
+        "message": "Trust Registration certificate expired on 31-12-2023. Valid renewal required.",
+        "due_date": "2026-11-05",
+        "severity": "medium"
+      },
+      {
+        "id": "ALT-002",
+        "application_id": "APP-2026-0412",
+        "doc_id": "d_accr",
+        "kind": "anomaly",
+        "message": "NBA Accreditation certificate validity mismatch against central issuer registry.",
+        "due_date": "2026-10-30",
+        "severity": "high"
+      },
+      {
+        "id": "ALT-003",
+        "application_id": "APP-2026-0412",
+        "doc_id": "d_noc",
+        "kind": "pending_verification",
+        "message": "State Government NOC digital certificate verification pending (HTTP 202).",
+        "due_date": "2026-10-28",
+        "severity": "high"
+      },
+      {
+        "id": "ALT-004",
+        "application_id": "APP-2026-0412",
+        "doc_id": null,
+        "kind": "missing",
+        "message": "Mandatory statutory document 'Affidavit / Undertaking' is missing from submission.",
+        "due_date": "2026-10-27",
+        "severity": "high"
+      }
+    ]
+  },
+  "APP-2026-0398": {
+    "id": "APP-2026-0398",
+    "institution": "Clean Valley Polytechnic",
+    "category_id": "cat-eoa",
+    "category_label": "Extension of Approval (EoA)",
+    "submitted_at": "2026-10-21T09:00:00Z",
+    "risk_score": 0,
+    "doc_count": 4,
+    "status_counts": {
+      "verified": 4
+    },
+    "flag_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "has_missing": false,
+    "checklist": [
+      {
+        "doc_type": "land_lease_deed",
+        "label": "Land lease deed",
+        "required": true,
+        "description": "Land title deed",
+        "document_id": "d_clean_land"
+      },
+      {
+        "doc_type": "building_plan",
+        "label": "Building completion certificate",
+        "required": true,
+        "description": "Building occupancy",
+        "document_id": "d_clean_bldg"
+      },
+      {
+        "doc_type": "fire_safety",
+        "label": "Fire safety certificate",
+        "required": true,
+        "description": "Fire clearance",
+        "document_id": "d_clean_fire"
+      },
+      {
+        "doc_type": "accreditation",
+        "label": "AICTE Prior approval",
+        "required": true,
+        "description": "Prior approval",
+        "document_id": "d_clean_aicte"
+      }
+    ],
+    "documents": [
+      {
+        "id": "d_clean_land",
+        "application_id": "APP-2026-0398",
+        "doc_type": "land_lease_deed",
+        "label": "Government Land Allotment Order",
+        "filename": "Clean_Land_Allotment_Deed.pdf",
+        "status": "verified",
+        "uploaded_at": "2026-10-21T09:00:00Z",
+        "is_scanned": false,
+        "page_sizes": [
+          {
+            "width": 595.28,
+            "height": 841.89
+          }
+        ],
+        "revisions": [
+          {
+            "rev": 1,
+            "label": "Original",
+            "saved_at": "2010-01-01T10:00:00Z",
+            "producer": "ReportLab PDF",
+            "is_current": true
+          }
+        ],
+        "signature": null,
+        "verification": {
+          "source": "State Land Portal",
+          "reference": "GOV/ALLOT/2010/88",
+          "requested_at": "2026-10-21T09:01:00Z",
+          "result": "verified",
+          "message": "Allotment deed verified with District Collectorate.",
+          "submitted_fields": {
+            "trust_name": "Clean Valley Educational Foundation",
+            "land_area": "25,000 sq m"
+          },
+          "source_fields": {
+            "trust_name": "Clean Valley Educational Foundation",
+            "land_area": "25,000 sq m"
+          }
+        },
+        "fields": [
+          {
+            "name": "trust_name",
+            "value": "Clean Valley Educational Foundation",
+            "confidence": "high"
+          },
+          {
+            "name": "land_area",
+            "value": "25,000 sq m",
+            "confidence": "high"
+          }
+        ],
+        "findings": []
+      },
+      {
+        "id": "d_clean_bldg",
+        "application_id": "APP-2026-0398",
+        "doc_type": "building_plan",
+        "label": "Building Completion Certificate",
+        "filename": "PWD_Building_Completion_Cert.pdf",
+        "status": "verified",
+        "uploaded_at": "2026-10-21T09:00:00Z",
+        "is_scanned": false,
+        "page_sizes": [
+          {
+            "width": 595.28,
+            "height": 841.89
+          }
+        ],
+        "revisions": [
+          {
+            "rev": 1,
+            "label": "Original",
+            "saved_at": "2018-05-10T10:00:00Z",
+            "producer": "ReportLab PDF",
+            "is_current": true
+          }
+        ],
+        "signature": null,
+        "verification": {
+          "source": "PWD Building Authority",
+          "reference": "PWD/OCC/2018/412",
+          "requested_at": "2026-10-21T09:01:00Z",
+          "result": "verified",
+          "message": "Certificate confirmed valid.",
+          "submitted_fields": {
+            "trust_name": "Clean Valley Educational Foundation"
+          },
+          "source_fields": {
+            "trust_name": "Clean Valley Educational Foundation"
+          }
+        },
+        "fields": [
+          {
+            "name": "trust_name",
+            "value": "Clean Valley Educational Foundation",
+            "confidence": "high"
+          }
+        ],
+        "findings": []
+      },
+      {
+        "id": "d_clean_fire",
+        "application_id": "APP-2026-0398",
+        "doc_type": "fire_safety",
+        "label": "Fire Safety Clearance",
+        "filename": "Fire_Safety_Clearance_2026.pdf",
+        "status": "verified",
+        "uploaded_at": "2026-10-21T09:00:00Z",
+        "is_scanned": false,
+        "page_sizes": [
+          {
+            "width": 595.28,
+            "height": 841.89
+          }
+        ],
+        "revisions": [
+          {
+            "rev": 1,
+            "label": "Original",
+            "saved_at": "2026-01-15T10:00:00Z",
+            "producer": "ReportLab PDF",
+            "is_current": true
+          }
+        ],
+        "signature": null,
+        "verification": {
+          "source": "Municipal Fire Service Headquarters",
+          "reference": "FIRE/NOC/2026/19420",
+          "requested_at": "2026-10-21T09:01:00Z",
+          "result": "verified",
+          "message": "Active clearance verified.",
+          "submitted_fields": {
+            "cert_valid_to": "14-01-2029"
+          },
+          "source_fields": {
+            "cert_valid_to": "14-01-2029"
+          }
+        },
+        "fields": [
+          {
+            "name": "cert_valid_to",
+            "value": "14-01-2029",
+            "confidence": "high"
+          }
+        ],
+        "findings": []
+      },
+      {
+        "id": "d_clean_aicte",
+        "application_id": "APP-2026-0398",
+        "doc_type": "accreditation",
+        "label": "AICTE Prior Approval Extension",
+        "filename": "AICTE_EOA_Extension_Report.pdf",
+        "status": "verified",
+        "uploaded_at": "2026-10-21T09:00:00Z",
+        "is_scanned": false,
+        "page_sizes": [
+          {
+            "width": 595.28,
+            "height": 841.89
+          }
+        ],
+        "revisions": [
+          {
+            "rev": 1,
+            "label": "Original",
+            "saved_at": "2025-06-01T10:00:00Z",
+            "producer": "ReportLab PDF",
+            "is_current": true
+          }
+        ],
+        "signature": null,
+        "verification": {
+          "source": "AICTE Central Portal",
+          "reference": "AICTE/EOA/2025/1-492",
+          "requested_at": "2026-10-21T09:01:00Z",
+          "result": "verified",
+          "message": "Approval record verified in national portal.",
+          "submitted_fields": {
+            "trust_name": "Clean Valley Educational Foundation"
+          },
+          "source_fields": {
+            "trust_name": "Clean Valley Educational Foundation"
+          }
+        },
+        "fields": [
+          {
+            "name": "trust_name",
+            "value": "Clean Valley Educational Foundation",
+            "confidence": "high"
+          }
+        ],
+        "findings": []
+      }
+    ],
+    "crosscheck": {
+      "fields": [
+        {
+          "id": "trust_name",
+          "label": "Trust Name"
+        },
+        {
+          "id": "land_area",
+          "label": "Land Area"
+        }
+      ],
+      "sources": [
+        {
+          "id": "application",
+          "label": "Application"
+        },
+        {
+          "id": "d_clean_land",
+          "label": "Land Deed"
+        }
+      ],
+      "cells": {
+        "trust_name": {
+          "application": {
+            "value": "Clean Valley Educational Foundation",
+            "normalized": "clean valley",
+            "match": true
+          },
+          "d_clean_land": {
+            "value": "Clean Valley Educational Foundation",
+            "normalized": "clean valley",
+            "match": true
+          }
+        },
+        "land_area": {
+          "application": {
+            "value": "25,000 sq m",
+            "normalized": "25000",
+            "match": true
+          },
+          "d_clean_land": {
+            "value": "25,000 sq m",
+            "normalized": "25000",
+            "match": true
+          }
+        }
+      }
+    },
+    "verification_log": [
+      {
+        "id": "VER-B-01",
+        "doc_id": "d_clean_land",
+        "doc_label": "Government Land Allotment Order",
+        "source": "State Land Portal",
+        "reference": "GOV/ALLOT/2010/88",
+        "requested_at": "2026-10-21T09:01:00Z",
+        "status": "verified",
+        "message": "Allotment deed verified with District Collectorate."
+      }
+    ],
+    "alerts": []
+  },
+  "APP-2026-0219": {
+    "id": "APP-2026-0219",
+    "institution": "Meridian Institute of Management",
+    "category_id": "cat-intake",
+    "category_label": "Increase in Intake / Additional Course",
+    "submitted_at": "2026-10-20T11:45:00Z",
+    "risk_score": 41,
+    "doc_count": 5,
+    "status_counts": {
+      "verified": 3,
+      "expired": 1,
+      "manual_review_required": 1
+    },
+    "flag_counts": {
+      "high": 2,
+      "medium": 1,
+      "low": 2
+    },
+    "has_missing": false,
+    "checklist": [],
+    "documents": [],
+    "crosscheck": {
+      "fields": [],
+      "sources": [],
+      "cells": {}
+    },
+    "verification_log": [],
+    "alerts": [
+      {
+        "id": "ALT-005",
+        "application_id": "APP-2026-0219",
+        "doc_id": "d_meridian_cert",
+        "kind": "expiring",
+        "message": "Building Safety Clearance certificate expiring in 25 days (17-11-2026).",
+        "due_date": "2026-11-17",
+        "severity": "medium"
+      }
+    ]
+  },
+  "APP-2026-0155": {
+    "id": "APP-2026-0155",
+    "institution": "Kaveri College of Engineering",
+    "category_id": "cat-eoa",
+    "category_label": "Extension of Approval (EoA)",
+    "submitted_at": "2026-10-19T14:20:00Z",
+    "risk_score": 22,
+    "doc_count": 6,
+    "status_counts": {
+      "verified": 4,
+      "verification_pending": 1,
+      "mismatch_detected": 1
+    },
+    "flag_counts": {
+      "high": 1,
+      "medium": 1,
+      "low": 0
+    },
+    "has_missing": false,
+    "checklist": [],
+    "documents": [],
+    "crosscheck": {
+      "fields": [],
+      "sources": [],
+      "cells": {}
+    },
+    "verification_log": [],
+    "alerts": []
+  },
+  "APP-2026-0112": {
+    "id": "APP-2026-0112",
+    "institution": "Lakshmi Polytechnic",
+    "category_id": "cat-new",
+    "category_label": "Introduction of New Programme",
+    "submitted_at": "2026-10-18T16:10:00Z",
+    "risk_score": 9,
+    "doc_count": 4,
+    "status_counts": {
+      "verified": 3,
+      "manual_review_required": 1
+    },
+    "flag_counts": {
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "has_missing": false,
+    "checklist": [],
+    "documents": [],
+    "crosscheck": {
+      "fields": [],
+      "sources": [],
+      "cells": {}
+    },
+    "verification_log": [],
+    "alerts": []
+  }
+}
