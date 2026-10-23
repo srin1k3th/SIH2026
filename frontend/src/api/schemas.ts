@@ -150,7 +150,7 @@ export const ApplicationSummarySchema = z.object({
   submitted_at: z.string(),
   risk_score: z.number(),
   doc_count: z.number(),
-  status_counts: z.record(z.string(), z.number()).optional(),
+  status_counts: z.record(DocStatusSchema, z.number()),
   flag_counts: z.object({
     high: z.number(),
     medium: z.number(),

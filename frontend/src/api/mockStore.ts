@@ -29,6 +29,7 @@ class MockStore {
   private categories: Category[] = [];
   private applications: ApplicationSummary[] = [];
   private applicationDetails: Record<string, ApplicationDetail> = {};
+  private baseApplicationDetails: Record<string, ApplicationDetail> = {};
   private rules: Rule[] = [];
   private auditEvents: AuditEvent[] = [];
   private auditVerify: AuditVerifyResult = { valid: true, checked: 0, first_broken_seq: null };
@@ -48,6 +49,7 @@ class MockStore {
     this.categories = JSON.parse(JSON.stringify(categoriesData));
     this.applications = JSON.parse(JSON.stringify(appSummariesData));
     this.applicationDetails = JSON.parse(JSON.stringify(appDetailsData));
+    this.baseApplicationDetails = JSON.parse(JSON.stringify(appDetailsData));
     this.rules = JSON.parse(JSON.stringify(rulesData));
     this.auditEvents = JSON.parse(JSON.stringify(auditData));
     this.auditVerify = JSON.parse(JSON.stringify(auditVerifyData));
@@ -312,6 +314,8 @@ class MockStore {
       rule.threshold.value = thresholdValue;
     }
 
+    this.recomputeAllApplications();
+
     this.logAuditEvent(
       'RULE_MODIFIED',
       id,
@@ -319,6 +323,62 @@ class MockStore {
     );
 
     return JSON.parse(JSON.stringify(rule));
+  }
+
+  public recomputeAllApplications() {
+    const disabledRuleIds = new Set(this.rules.filter((r) => !r.enabled).map((r) => r.id));
+
+    for (const [appId, baseApp] of Object.entries(this.baseApplicationDetails)) {
+      const app = JSON.parse(JSON.stringify(baseApp)) as ApplicationDetail;
+      let totalHigh = 0;
+      let totalMed = 0;
+      let totalLow = 0;
+      const statusCounts: Record<string, number> = {};
+
+      app.documents.forEach((doc) => {
+        doc.findings = doc.findings.filter((f) => !disabledRuleIds.has(f.rule_id));
+
+        if (doc.findings.length === 0) {
+          doc.status = 'verified';
+        } else {
+          const statuses = doc.findings.map((f) => {
+            if (f.source === 'issuer') return 'mismatch_detected';
+            if (f.type === 'DOC_EXPIRED') return 'expired';
+            return 'manual_review_required';
+          });
+          doc.status = resolveDocStatusPrecedence(statuses as any);
+        }
+
+        statusCounts[doc.status] = (statusCounts[doc.status] || 0) + 1;
+
+        doc.findings.forEach((f) => {
+          if (f.severity === 'high') totalHigh++;
+          if (f.severity === 'medium') totalMed++;
+          if (f.severity === 'low') totalLow++;
+        });
+      });
+
+      const newRisk = calculateRiskScore({
+        high: totalHigh,
+        medium: totalMed,
+        low: totalLow,
+      });
+
+      app.risk_score = newRisk;
+      app.flag_counts = { high: totalHigh, medium: totalMed, low: totalLow };
+      app.status_counts = statusCounts as any;
+
+      this.applicationDetails[appId] = app;
+
+      const summary = this.applications.find((a) => a.id === appId);
+      if (summary) {
+        summary.risk_score = newRisk;
+        summary.flag_counts = app.flag_counts;
+        summary.status_counts = app.status_counts;
+      }
+    }
+
+    this.recomputeDashboard();
   }
 
   public getAudit(): AuditEvent[] {
